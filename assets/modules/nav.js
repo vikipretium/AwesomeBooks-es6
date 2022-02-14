@@ -29,5 +29,3 @@ export const confun = (e) => {
     connav.style.display = 'flex';
   }
 };
-
- 

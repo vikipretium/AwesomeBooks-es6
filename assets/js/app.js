@@ -1,10 +1,21 @@
+import Book from '../modules/book.js';
+
+import {
+  navlist, navadd, navcon, listfun, addfun, confun,
+} from '../modules/nav.js';
+
+// eslint-disable-next-line no-unused-vars
+// const displayTime = () => {
+//   document.getElementById('current-date').innerText = new Date().toLocaleString();
+//   setTimeout(displayTime, 1000);
+// };
+// displayTime();
+
+import { DateTime } from '../../node_modules/luxon/src/luxon.js';
+
 const inputTitle = document.querySelector('.input-title');
 const inputAuthor = document.querySelector('.input-author');
-const bookShelf = document.querySelector('.book-shelf');
-const bookCard = document.createElement('div');
 const bookForm = document.querySelector('.book-input');
-
-import Book from "../modules/book.js";
 
 const book = new Book(inputTitle.value, inputAuthor.value);
 
@@ -28,26 +39,15 @@ bookForm.addEventListener('submit', (e) => {
 
 window.addEventListener('DOMContentLoaded', book.showBook());
 
-import {navlist, navadd, navcon,listfun, addfun, confun} from "../modules/nav.js";
-
 navlist.addEventListener('click', listfun);
 
 navadd.addEventListener('click', addfun);
 
 navcon.addEventListener('click', confun);
-
-// eslint-disable-next-line no-unused-vars
-// const displayTime = () => {
-//   document.getElementById('current-date').innerText = new Date().toLocaleString();
-//   setTimeout(displayTime, 1000);
-// };
-// displayTime();
-
-import { DateTime } from '../../node_modules/luxon/src/luxon.js';
 const addDate = () => {
-    const dateContainer = document.getElementById('current-date');
-    dateContainer.textContent = '';
-    const date = DateTime.now();
-    dateContainer.append(date.toHTTP());
-    };
+  const dateContainer = document.getElementById('current-date');
+  dateContainer.textContent = '';
+  const date = DateTime.now();
+  dateContainer.append(date.toHTTP());
+};
 window.setInterval(addDate, 1000);

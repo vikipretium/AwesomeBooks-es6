@@ -1,43 +1,42 @@
-
 const bookCard = document.createElement('div');
 const bookShelf = document.querySelector('.book-shelf');
 
 export default class Book {
-    constructor(title, author) {
-      this.title = title;
-      this.author = author;
-    }
-  
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
     populateLocalStorage = () => {
       const books = this.getBooks();
       if (!books) {
         localStorage.setItem('books', JSON.stringify([]));
       }
     };
-  
+
     getBooks = () => {
       const books = JSON.parse(localStorage.getItem('books'));
       return books || [];
     };
-  
+
     removeBook = (id) => {
       const books = this.getBooks();
       const newBooks = books.filter((book) => book.id.toString() !== id);
       localStorage.setItem('books', JSON.stringify(newBooks));
       document.querySelector(`#container${id}`).remove();
     };
-  
+
     addBook = (book) => {
       const books = this.getBooks();
       books.push(book);
       localStorage.setItem('books', JSON.stringify(books));
     };
-  
+
     removeBookFromLocalStorage = (id) => {
       this.removeBook(id);
       this.showBook();
     };
-  
+
     showBook = () => {
       this.populateLocalStorage();
       const books = this.getBooks();
@@ -68,6 +67,4 @@ export default class Book {
         }
       }
     };
-  }
- 
- 
+}
