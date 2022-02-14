@@ -37,8 +37,12 @@ navadd.addEventListener('click', addfun);
 navcon.addEventListener('click', confun);
 
 // eslint-disable-next-line no-unused-vars
-const displayTime = () => {
-  document.getElementById('current-date').innerText = new Date().toLocaleString();
-  setTimeout(displayTime, 1000);
-};
-displayTime();
+// const displayTime = () => {
+//   document.getElementById('current-date').innerText = new Date().toLocaleString();
+//   setTimeout(displayTime, 1000);
+// };
+// displayTime();
+
+import { DateTime } from '/node_modules/luxon/src/luxon.js';
+const now = DateTime.now().toHTTP();
+document.getElementById('current-date').textContent = now; 
