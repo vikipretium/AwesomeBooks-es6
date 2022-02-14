@@ -43,6 +43,11 @@ navcon.addEventListener('click', confun);
 // };
 // displayTime();
 
-import { DateTime } from '/node_modules/luxon/src/luxon.js';
-const now = DateTime.now().toHTTP();
-document.getElementById('current-date').textContent = now; 
+import { DateTime } from '../../node_modules/luxon/src/luxon.js';
+const addDate = () => {
+    const dateContainer = document.getElementById('current-date');
+    dateContainer.textContent = '';
+    const date = DateTime.now();
+    dateContainer.append(date.toHTTP());
+    };
+window.setInterval(addDate, 1000);
