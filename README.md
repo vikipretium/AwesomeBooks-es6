@@ -6,9 +6,6 @@
 
 ![screenshot](./assets/images/1.png)
 
-![screenshot](./assets/images/2.png)
-
-
 Additional description about the project and its features.
 
 ## Tech used
@@ -20,7 +17,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://vikipretium.github.io/awesome-books-project/)
+[Live Demo Link](https://vikipretium.github.io/AwesomeBooks-es6/)
 
 ## Built With
 
@@ -98,12 +95,6 @@ npx eslint .
 - GitHub: [@vikipretium](https://github.com/vikipretium)
 - Twitter: [@vikipretium](https://twitter.com/vikipretium)
 - LinkedIn: [vikipretium](https://linkedin.com/in/vikipretium)
-
-👤 **Mwafrika Josue**
-
-- GitHub: [@mwafrika](https://github.com/mwafrika)
-- Twitter: [@mwafrika](https://twitter.com/mwafrikamufung1)
-- LinkedIn: [mwafrika](https://linkedin.com/in/mwafrika-mufungizi)
 
 Contributions, issues, and feature requests are welcome!
 
