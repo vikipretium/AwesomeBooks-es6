@@ -8,7 +8,7 @@ import { DateTime } from '../../node_modules/luxon/src/luxon.js';
 
 const inputTitle = document.querySelector('.input-title');
 const inputAuthor = document.querySelector('.input-author');
-  const bookForm = document.querySelector('.book-input');
+const bookForm = document.querySelector('.book-input');
 
 const book = new Book(inputTitle.value, inputAuthor.value);
 
