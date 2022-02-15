@@ -4,18 +4,11 @@ import {
   navlist, navadd, navcon, listfun, addfun, confun,
 } from '../modules/nav.js';
 
-// eslint-disable-next-line no-unused-vars
-// const displayTime = () => {
-//   document.getElementById('current-date').innerText = new Date().toLocaleString();
-//   setTimeout(displayTime, 1000);
-// };
-// displayTime();
-
 import { DateTime } from '../../node_modules/luxon/src/luxon.js';
 
 const inputTitle = document.querySelector('.input-title');
 const inputAuthor = document.querySelector('.input-author');
-const bookForm = document.querySelector('.book-input');
+  const bookForm = document.querySelector('.book-input');
 
 const book = new Book(inputTitle.value, inputAuthor.value);
 
