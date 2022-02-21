@@ -1,12 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books Project
+# Awesome Books Using ES6
 
 > A web app to add your books in a digital shelf. This webapp is built with vanila javascript. A local storage option is added with this project, so that a user can store data in this is web app.
 
 ![screenshot](./assets/images/1.png)
-
-Additional description about the project and its features.
 
 ## Tech used
 
