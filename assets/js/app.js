@@ -1,7 +1,12 @@
 import Book from '../modules/book.js';
 
 import {
-  navlist, navadd, navcon, listfun, addfun, confun,
+  navlist,
+  navadd,
+  navcon,
+  listfun,
+  addfun,
+  confun,
 } from '../modules/nav.js';
 
 import { DateTime } from '../../node_modules/luxon/src/luxon.js';
@@ -41,6 +46,8 @@ const addDate = () => {
   const dateContainer = document.getElementById('current-date');
   dateContainer.textContent = '';
   const date = DateTime.now();
-  dateContainer.append(date.toHTTP());
+  dateContainer.append(
+    date.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS),
+  );
 };
 window.setInterval(addDate, 1000);
