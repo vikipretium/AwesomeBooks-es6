@@ -1,4 +1,4 @@
-import Book from "../modules/book.js";
+import Book from '../modules/book.js';
 
 import {
   navlist,
@@ -7,17 +7,17 @@ import {
   listfun,
   addfun,
   confun,
-} from "../modules/nav.js";
+} from '../modules/nav.js';
 
-import { DateTime } from "../../node_modules/luxon/src/luxon.js";
+import { DateTime } from '../../node_modules/luxon/src/luxon.js';
 
-const inputTitle = document.querySelector(".input-title");
-const inputAuthor = document.querySelector(".input-author");
-const bookForm = document.querySelector(".book-input");
+const inputTitle = document.querySelector('.input-title');
+const inputAuthor = document.querySelector('.input-author');
+const bookForm = document.querySelector('.book-input');
 
 const book = new Book(inputTitle.value, inputAuthor.value);
 
-bookForm.addEventListener("submit", (e) => {
+bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const book = new Book(inputTitle.value, inputAuthor.value);
   const { title, author } = book;
@@ -35,19 +35,19 @@ bookForm.addEventListener("submit", (e) => {
   }
 });
 
-window.addEventListener("DOMContentLoaded", book.showBook());
+window.addEventListener('DOMContentLoaded', book.showBook());
 
-navlist.addEventListener("click", listfun);
+navlist.addEventListener('click', listfun);
 
-navadd.addEventListener("click", addfun);
+navadd.addEventListener('click', addfun);
 
-navcon.addEventListener("click", confun);
+navcon.addEventListener('click', confun);
 const addDate = () => {
-  const dateContainer = document.getElementById("current-date");
-  dateContainer.textContent = "";
+  const dateContainer = document.getElementById('current-date');
+  dateContainer.textContent = '';
   const date = DateTime.now();
   dateContainer.append(
-    date.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS)
+    date.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS),
   );
 };
 window.setInterval(addDate, 1000);
